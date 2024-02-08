@@ -1,15 +1,19 @@
 
-const start = document.createElement('div');
-document.body.appendChild(start);
-let wantedAmount = 1;
-const blocks = document.createElement('div') 
-blocks.style.width = 200;
-blocks.style.height = 200;
-blocks.id = "block";
-const cloneBlock = blocks.cloneNode;
+const container = document.createElement('div');
+document.body.appendChild(container);
+const sketchBox = document.querySelector('div')
 
-let amountOfBlocks = document.querySelectorAll("block");
-while (amountOfBlocks.length < wantedAmount) {
-    start.appendChild(cloneBlock);
+const block = document.createElement('div') 
+block.style.width = 200;
+block.style.height = 200;
+block.className = "block";
 
+container.appendChild(block);
+
+
+let wantedAmount = 2;
+
+for (let i = 0; i < wantedAmount; i++) {
+    const cloneBlock = block.cloneNode()
+    container.appendChild(cloneBlock);
 }

@@ -2,10 +2,9 @@
 const container = document.createElement('div');
 document.body.appendChild(container);
 const sketchBox = document.querySelector('div')
+container.id = "container";
 
 const block = document.createElement('div') 
-block.style.width = 200;
-block.style.height = 200;
 block.className = "block";
 
 container.appendChild(block);

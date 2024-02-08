@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    align-content:center ;
+    justify-content: center;
+}
+#container {
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    margin: 50px;
+    height: 1000px;
+    width:1000px;
+}
+
+.block {
+    background-color: white;
+    display: flex;
+    flex:auto;
+    flex-wrap: wrap;
+}

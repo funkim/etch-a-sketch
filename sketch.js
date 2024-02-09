@@ -16,13 +16,14 @@ displayContainer.appendChild(container)
 
 
 let wantedAmount = 1028;
-
+function duplicateClones() {
 for (let i = 0; i < wantedAmount; i++) {
     const cloneBlock = block.cloneNode()
     cloneBlock.style.backgroundColor = 'white';
     container.appendChild(cloneBlock);
 }
-
+}
+function applyHover() {
 const blocksSelected = document.querySelectorAll(".block")
     blocksSelected.forEach(block => {
     block.addEventListener('mouseover', (e) => {
@@ -31,7 +32,7 @@ const blocksSelected = document.querySelectorAll(".block")
         }
     })
 });
-
+}
 const buttonContainer = document.createElement('div')
 document.body.appendChild(buttonContainer);
 const button = document.createElement('button')
@@ -40,10 +41,23 @@ button.textContent = "Pick a number!"
 buttonContainer.appendChild(button)
 buttonContainer.id = "BContainer"
 
+document.addEventListener('DOMContentLoaded',() => {
 button.addEventListener('mousedown', (e) => {
     const userInput = prompt("Choose a number (lower than 500) to create a new graph with a new size!")
+    if (userInput) {
+        const inputNumber = parseInt(userInput, 10)
+        if (!isNaN(inputNumber)) {
+    container.innerHTML = '';
     console.log(userInput)
-    const wantedAmount = userInput*userInput
+    wantedAmount = userInput*userInput
     block.style.backgroundColor = 'white'
-    return wantedAmount;
+    duplicateClones();
+    applyHover();
+    return wantedAmount
+}else {
+    alert("hey buddy input a number");
+}
+    }
+});
+
 })

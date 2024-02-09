@@ -34,8 +34,8 @@ body {
 .block {
     background-color: white;
     display: flex;
-    min-width: 20px;
-    min-height: 20px;
+    min-width: 10px;
+    min-height: 10px;
     flex:auto;
 }
 

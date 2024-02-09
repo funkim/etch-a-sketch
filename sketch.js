@@ -8,7 +8,11 @@ block.className = "block";
 const displayContainer = document.createElement('div');
 displayContainer.id = "display";
 
-document.body.appendChild(displayContainer);
+const containerForDisplay = document.createElement('div');
+document.body.appendChild(containerForDisplay);
+containerForDisplay.appendChild(displayContainer)
+containerForDisplay.id = "DDContainer"
+containerForDisplay.appendChild(displayContainer);
 displayContainer.appendChild(container)
 
 
@@ -28,3 +32,15 @@ const blocksSelected = document.querySelectorAll(".block")
         }
     })
 });
+
+const buttonContainer = document.createElement('div')
+document.body.appendChild(buttonContainer);
+const button = document.createElement('button')
+button.className = "button";
+button.textContent = "Pick a number!"
+buttonContainer.appendChild(button)
+buttonContainer.id = "BContainer"
+
+button.addEventListener('mousedown', (e) => {
+
+})

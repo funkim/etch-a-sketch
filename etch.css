@@ -1,16 +1,25 @@
 body {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    flex:auto;
+}
+
+
+#DDContainer{
+    display: flex;
     align-content:center ;
     justify-content: center;
+    flex-wrap: wrap;
 }
 #display {
     display: flex;
     flex-wrap: wrap;
     background-color: black;
     padding: 10px;
-    margin: 50px;
-    height: 1000px;
-    width:1000px;
+    margin: 20px;
+    height: 800px;
+    width:800px;
     align-content: center;
     justify-content: center;
 }
@@ -18,8 +27,8 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    height: 800px;
-    width: 800px;
+    height: 700px;
+    width: 700px;
 
 }
 .block {
@@ -28,4 +37,19 @@ body {
     min-width: 20px;
     min-height: 20px;
     flex:auto;
+}
+
+#BContainer {
+    justify-self:start ;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex:auto
+}
+
+
+.button {
+    width: 200px;
+    height: 50px;
 }

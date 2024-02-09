@@ -33,11 +33,8 @@ body {
 }
 .block {
     background-color: white;
-    display: flex;
-    min-width: 10px;
-    min-height: 10px;
-    flex:auto;
 }
+
 
 #BContainer {
     justify-self:start ;

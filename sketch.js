@@ -17,8 +17,13 @@ displayContainer.appendChild(container)
 
 let wantedAmount = 1028;
 function duplicateClones() {
+    const blocksPerRow = Math.sqrt(wantedAmount)
+    const blockSize = 700 / blocksPerRow;
+
 for (let i = 0; i < wantedAmount; i++) {
     const cloneBlock = block.cloneNode()
+    cloneBlock.style.width = `${blockSize}px`;
+    cloneBlock.style.height = `${blockSize}px`;
     cloneBlock.style.backgroundColor = 'white';
     container.appendChild(cloneBlock);
 }

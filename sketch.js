@@ -12,7 +12,6 @@ const containerForDisplay = document.createElement('div');
 document.body.appendChild(containerForDisplay);
 containerForDisplay.appendChild(displayContainer)
 containerForDisplay.id = "DDContainer"
-containerForDisplay.appendChild(displayContainer);
 displayContainer.appendChild(container)
 
 
@@ -42,5 +41,9 @@ buttonContainer.appendChild(button)
 buttonContainer.id = "BContainer"
 
 button.addEventListener('mousedown', (e) => {
-
+    const userInput = prompt("Choose a number (lower than 500) to create a new graph with a new size!")
+    console.log(userInput)
+    const wantedAmount = userInput*userInput
+    block.style.backgroundColor = 'white'
+    return wantedAmount;
 })

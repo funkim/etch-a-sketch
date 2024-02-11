@@ -18,7 +18,8 @@ displayContainer.appendChild(container)
 let wantedAmount = 1028;
 function duplicateClones() {
     const blocksPerRow = Math.sqrt(wantedAmount)
-    const blockSize = 700 / blocksPerRow;
+    const containerWidth = container.clientWidth
+    const blockSize = containerWidth / blocksPerRow; 
 
 for (let i = 0; i < wantedAmount; i++) {
     const cloneBlock = block.cloneNode()
